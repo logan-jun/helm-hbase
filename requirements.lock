@@ -1,9 +1,9 @@
 dependencies:
 - name: hdfs
-  version: 0.1.9
   repository: https://logan-jun.github.io/helm-chart/
-  condition: hdfs.enabled
+  version: 0.1.9
 - name: zookeeper
-  version: ~2.1.0
   repository: https://kubernetes-charts-incubator.storage.googleapis.com/
-  condition: zookeeper.enabled
+  version: ~2.1.0
+digest: sha256:8fd2c9882dfbf0cd14ac2fa7fa3fea579f2e749180c78ed3cbe0d67b7686ac94
+generated: "2020-06-09T17:08:08.391629+09:00"

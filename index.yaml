@@ -1,0 +1,69 @@
+apiVersion: v1
+entries:
+  hbase:
+  - apiVersion: v1
+    appVersion: 2.0.1
+    created: "2020-06-09T17:08:31.73902+09:00"
+    dependencies:
+    - condition: hdfs.enabled
+      name: hdfs
+      repository: https://logan-jun.github.io/helm-chart/
+      version: 0.1.9
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://kubernetes-charts-incubator.storage.googleapis.com/
+      version: ~2.1.0
+    description: HBase is an open-source non-relational distributed database modeled
+      after Google's Bigtable and written in Java.
+    digest: 2402aa6a72d5848585654a39166d9b39ca032b0f7b68e567b10612a8b6a58753
+    home: https://hbase.apache.org/
+    icon: http://hbase.apache.org/images/hbase_logo_with_orca.png
+    maintainers:
+    - email: cgiraldo@gradiant.org
+      name: cgiraldo
+    name: hbase
+    urls:
+    - https://logan-jun.github.io/helm-hbase/hbase-0.1.5.tgz
+    version: 0.1.5
+  hdfs:
+  - apiVersion: v1
+    appVersion: 2.9.0
+    created: "2020-06-09T17:08:31.740834+09:00"
+    description: The Apache Hadoop software library is a framework that allows for
+      the distributed processing of large data sets across clusters of computers using
+      simple programming models.
+    digest: 0b05d0214e87a7ed500abbeb1de2a5996e7fcbb856eb18bd6892735f1c361e26
+    home: https://hadoop.apache.org/
+    icon: http://hadoop.apache.org/images/hadoop-logo.jpg
+    maintainers:
+    - email: cgiraldo@gradiant.org
+      name: cgiraldo
+    name: hdfs
+    sources:
+    - https://github.com/apache/hadoop
+    urls:
+    - https://logan-jun.github.io/helm-hbase/charts/hdfs-0.1.9.tgz
+    version: 0.1.9
+  zookeeper:
+  - apiVersion: v1
+    appVersion: 3.5.5
+    created: "2020-06-09T17:08:31.742048+09:00"
+    description: Centralized service for maintaining configuration information, naming,
+      providing distributed synchronization, and providing group services.
+    digest: 0df47968a5a5f66abb2fcd8b680c0a22f4e69019be9695bd282affc1e79ab14e
+    home: https://zookeeper.apache.org/
+    icon: https://zookeeper.apache.org/images/zookeeper_small.gif
+    kubeVersion: ^1.10.0-0
+    maintainers:
+    - email: lachlan.evenson@microsoft.com
+      name: lachie83
+    - email: owensk@google.com
+      name: kow3ns
+    name: zookeeper
+    sources:
+    - https://github.com/apache/zookeeper
+    - https://github.com/kubernetes/contrib/tree/master/statefulsets/zookeeper
+    urls:
+    - https://logan-jun.github.io/helm-hbase/charts/zookeeper-2.1.4.tgz
+    version: 2.1.4
+generated: "2020-06-09T17:08:31.733314+09:00"
